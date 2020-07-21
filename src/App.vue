@@ -1,12 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <el-container>
+      <el-header>
+        <page-header></page-header>
+      </el-header>
+      <el-container>
+        <el-aside width="200px">Aside</el-aside>
+        <el-main
+          >Main
+          <!-- <div id="nav">
+            <router-link to="/">Home</router-link> |
+            <router-link to="/about">About</router-link>
+          </div> -->
+          <router-view />
+        </el-main>
+      </el-container>
+    </el-container>
   </div>
 </template>
+
+<script type="text/ecmascript-6">
+import PageHeader from '@/components/PageHeader';
+// import PageAside from '@/components/PageAside';
+
+export default {
+  name: 'App',
+  components: {
+    PageHeader,
+    // PageAside,
+  },
+};
+</script>
 
 <style>
 #app {
